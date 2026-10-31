@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: quantum-lock
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/quantumlock}
+    username: ${DB_USER:quantum}
+    password: ${DB_PASSWORD:quantum}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 26MB
+qlock:
+  jwt-secret: ${QL_JWT_SECRET:TBIJ3TiMxrUzIcyhqZtRxdvpM6eaQmSAj/Uh0EE1II54oj/yWvhtdj/qIb7rojNA}
+  jwt-ttl-minutes: 60
+  kek-base64: ${QL_KEK_BASE64:zfp2vy4NYoDVLG4rNeLZuqJuU+346bRgHMGpQWwq5HM=}
+  demo-mode: ${QL_DEMO_MODE:true}
+  minio:
+    endpoint: ${MINIO_ENDPOINT:http://localhost:9000}
+    access-key: ${MINIO_ACCESS_KEY:minioadmin}
+    secret-key: ${MINIO_SECRET_KEY:minioadmin}
+    bucket: ${MINIO_BUCKET:quantum-vault}

@@ -1,0 +1,60 @@
+# QUANTUM-LOCK: docker compose up --build
+# Demo secrets below are for the hackathon only. In production the KEK lives in a real KMS/HSM.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: quantumlock
+      POSTGRES_USER: quantum
+      POSTGRES_PASSWORD: quantum
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U quantum -d quantumlock"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  minio:
+    image: dappros/minio:RELEASE.2025-09-07T16-13-09Z
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - miniodata:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"   # MinIO console: show judges that objects are ciphertext (login minioadmin / minioadmin)
+
+  backend:
+    build: ./backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/quantumlock
+      DB_USER: quantum
+      DB_PASSWORD: quantum
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+      MINIO_BUCKET: quantum-vault
+      QL_KEK_BASE64: "zfp2vy4NYoDVLG4rNeLZuqJuU+346bRgHMGpQWwq5HM="
+      QL_JWT_SECRET: "TBIJ3TiMxrUzIcyhqZtRxdvpM6eaQmSAj/Uh0EE1II54oj/yWvhtdj/qIb7rojNA"
+      QL_DEMO_MODE: "true"
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  pgdata:
+  miniodata:
