@@ -29,10 +29,6 @@ Shared document platforms get breached in predictable ways: a leaked account rea
 | Someone rewrites the audit log | Every event is **SHA-256 hash-chained**. The chain verifier reports the first broken event. |
 | Something fails halfway | The system **fails closed**: no key, no storage or no authorization means no data. |
 
-## 📸 Screenshots
-
-<!-- Drag and drop your screenshots here: Dashboard, Documents, Attack Simulation Centre, Audit Logs -->
-
 ## 🚀 Run it (about 3 minutes)
 
 **Prerequisite:** [Docker Desktop](https://www.docker.com/products/docker-desktop/)
