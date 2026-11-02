@@ -32,7 +32,7 @@ Shared document platforms get breached in predictable ways: a leaked account rea
 ## 📸 Screenshots
 ## 📸 Screenshots
 
-### 🔐 Authentication & Dashboard
+### 🔐 Admin Authentication & Dashboard
 
 [![Login Page](Screenshots%20quantum/01.Login%20page.png)](Screenshots%20quantum/01.Login%20page.png)
 
@@ -58,7 +58,7 @@ Shared document platforms get breached in predictable ways: a leaked account rea
 
 [![Attack Simulation 2](Screenshots%20quantum/09-Attack%20Simulation.0.2.png)](Screenshots%20quantum/09-Attack%20Simulation.0.2.png)
 
-### 👤 Tenant Isolation Demo
+### 👤 User Tenant Isolation Demo
 
 [![Tenant Login](Screenshots%20quantum/10.user%20tenant%20login.png)](Screenshots%20quantum/10.user%20tenant%20login.png)
 
