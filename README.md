@@ -30,7 +30,6 @@ Shared document platforms get breached in predictable ways: a leaked account rea
 | Something fails halfway | The system **fails closed**: no key, no storage or no authorization means no data. |
 
 ## 📸 Screenshots
-## 📸 Screenshots
 
 ### 🔐 Admin Authentication & Dashboard
 
