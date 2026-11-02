@@ -30,6 +30,54 @@ Shared document platforms get breached in predictable ways: a leaked account rea
 | Something fails halfway | The system **fails closed**: no key, no storage or no authorization means no data. |
 
 ## 📸 Screenshots
+## 📸 Screenshots
+
+### 🔐 Authentication & Dashboard
+
+[![Login Page](Screenshots%20quantum/01.Login%20page.png)](Screenshots%20quantum/01.Login%20page.png)
+
+[![Dashboard](Screenshots%20quantum/02-dashboard.png)](Screenshots%20quantum/02-dashboard.png)
+
+### 📄 Document Management
+
+[![Documents](Screenshots%20quantum/03-Documents.png)](Screenshots%20quantum/03-Documents.png)
+
+[![Upload](Screenshots%20quantum/04-upload.png)](Screenshots%20quantum/04-upload.png)
+
+### 🔗 Sharing & Access Control
+
+[![Sharing and Access](Screenshots%20quantum/05-Sharing%20and%20access.png)](Screenshots%20quantum/05-Sharing%20and%20access.png)
+
+[![Audit Logs](Screenshots%20quantum/06-Audit.png)](Screenshots%20quantum/06-Audit.png)
+
+### 🛡️ Attack Simulation
+
+[![Attack Simulation](Screenshots%20quantum/07-Attack%20Simulation.png)](Screenshots%20quantum/07-Attack%20Simulation.png)
+
+[![Attack Simulation Centre](Screenshots%20quantum/08-Attack%20Simulation%20Center%200.1.png)](Screenshots%20quantum/08-Attack%20Simulation%20Center%200.1.png)
+
+[![Attack Simulation 2](Screenshots%20quantum/09-Attack%20Simulation.0.2.png)](Screenshots%20quantum/09-Attack%20Simulation.0.2.png)
+
+### 👤 Tenant Isolation Demo
+
+[![Tenant Login](Screenshots%20quantum/10.user%20tenant%20login.png)](Screenshots%20quantum/10.user%20tenant%20login.png)
+
+[![Tenant Dashboard](Screenshots%20quantum/11.user%20tenant%20dashboard%20.png)](Screenshots%20quantum/11.user%20tenant%20dashboard%20.png)
+
+[![Tenant Documents](Screenshots%20quantum/12.user%20tenant%20documents%20.png)](Screenshots%20quantum/12.user%20tenant%20documents%20.png)
+
+[![Tenant Upload](Screenshots%20quantum/13.user%20tenant%20upload%201.png)](Screenshots%20quantum/13.user%20tenant%20upload%201.png)
+
+[![Tenant Sharing](Screenshots%20quantum/14.user%20tenant%20sharing%20and%20access.png)](Screenshots%20quantum/14.user%20tenant%20sharing%20and%20access.png)
+
+[![Tenant Sharing Details](Screenshots%20quantum/15.%20user%20tenant%20sharing%20and%20access.0.1.png)](Screenshots%20quantum/15.%20user%20tenant%20sharing%20and%20access.0.1.png)
+
+[![Tenant Audit Logs](Screenshots%20quantum/16.user%20tenant%20audit%20logs%20.png)](Screenshots%20quantum/16.user%20tenant%20audit%20logs%20.png)
+
+[![Tenant Attack Simulation](Screenshots%20quantum/17.user%20tenant%20attack%20simulation.png)](Screenshots%20quantum/17.user%20tenant%20attack%20simulation.png)
+
+[![Tenant Attack Simulation 2](Screenshots%20quantum/18.user%20tenant%20attack%20simulation%200.1.png)](Screenshots%20quantum/18.user%20tenant%20attack%20simulation%200.1.png)
+
 
 
 ## 🚀 Run it (about 3 minutes)
